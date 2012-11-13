@@ -1,0 +1,79 @@
+<div class="af_dmm">
+<h1><{$smarty.const._MD_AF_DMM_LANG_LISTS_DELETE}></h1>
+
+<div class="confirm"><{$smarty.const._MD_AF_DMM_MESSAGE_CONFIRM_DELETE}></div>
+
+<form action="<{xoops_cooluri dirname=$dirname dataname=lists action=delete}>" method="post">
+  <dl class="edit">
+  <dt><{$smarty.const._MD_AF_DMM_LANG_LISTS_ID}></dt>
+  <dd><{$object->getShow('lists_id')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_CATEGORY_ID}></dt>
+  <dd><{$mainTitle|xoops_escape}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SITE}></dt>
+  <dd><{$object->getShow('site')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_TITLE}></dt>
+  <dd><{$object->getShow('title')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SERVICE_NAME}></dt>
+  <dd><{$object->getShow('service_name')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_FLOOR_NAME}></dt>
+  <dd><{$object->getShow('floor_name')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_CATEGORY_NAME}></dt>
+  <dd><{$object->getShow('category_name')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_CONTENT_ID}></dt>
+  <dd><{$object->getShow('content_id')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_PRODUCT_ID}></dt>
+  <dd><{$object->getShow('product_id')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_URL}></dt>
+  <dd><{$object->getShow('url')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_AFFILIATEURL}></dt>
+  <dd><{$object->getShow('affiliateURL')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_IMAGEURL_LIST}></dt>
+  <dd><{$object->getShow('imageURL_list')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_IMAGEURL_SMALL}></dt>
+  <dd><{$object->getShow('imageURL_small')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_IMAGEURL_LARGE}></dt>
+  <dd><{$object->getShow('imageURL_large')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES0}></dt>
+  <dd><{$object->getShow('sampleImageS0')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES1}></dt>
+  <dd><{$object->getShow('sampleImageS1')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES2}></dt>
+  <dd><{$object->getShow('sampleImageS2')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES3}></dt>
+  <dd><{$object->getShow('sampleImageS3')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES4}></dt>
+  <dd><{$object->getShow('sampleImageS4')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES5}></dt>
+  <dd><{$object->getShow('sampleImageS5')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES6}></dt>
+  <dd><{$object->getShow('sampleImageS6')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES7}></dt>
+  <dd><{$object->getShow('sampleImageS7')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES8}></dt>
+  <dd><{$object->getShow('sampleImageS8')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES9}></dt>
+  <dd><{$object->getShow('sampleImageS9')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_MOVIE_TAG}></dt>
+  <dd><{$object->getShow('movie_tag')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_PRICE}></dt>
+  <dd><{$object->getShow('price')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_LIST_PRICE}></dt>
+  <dd><{$object->getShow('list_price')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_DATE}></dt>
+  <dd><{$object->getShow('date')|xoops_formattimestamp:m}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_ITEMINFO_SERIES_NAME}></dt>
+  <dd><{$object->getShow('iteminfo_series_name')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_ITEMINFO_MAKER_NAME}></dt>
+  <dd><{$object->getShow('iteminfo_maker_name')}></dd>
+  <dt><{$smarty.const._MD_AF_DMM_LANG_POSTTIME}></dt>
+  <dd><{$object->getShow('posttime')|xoops_formattimestamp:m}></dd>
+
+    <dd>
+      <{xoops_token form=$actionForm}>
+      <{xoops_input type=hidden name=lists_id value=$actionForm->get('lists_id')}>
+      <input type="submit" class="formButton" value="<{$smarty.const._DELETE}>"/>
+      <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel"/>
+    </dd>
+  </dl>
+</form>
+</div>

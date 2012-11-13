@@ -1,0 +1,181 @@
+<div class="af_dmm">
+<h1><{$smarty.const._MD_AF_DMM_LANG_LISTS_EDIT}></h1>
+<{if $actionForm->hasError()}>
+  <ul class="error">
+    <{foreach item=message from=$actionForm->getErrorMessages()}>
+      <li><{$message|xoops_escape}></li>
+    <{/foreach}>
+  </ul>
+<{/if}>
+<form action="<{xoops_cooluri dirname=$dirname dataname=lists action=edit}>" method="post">
+  <dl class="edit">
+
+  <{xoops_input type=hidden name=lists_id value=$actionForm->get('lists_id')}>
+  <{if $accessController->getAccessControllerType()!='none'}>
+  <div class="control-group">
+    <label for="category_id" class="control-label required"><{$smarty.const._MD_AF_DMM_LANG_CATEGORY_ID}></label>
+    <div class="controls"><select name="category_id">
+      <{legacy_category_select tree=$accessController->getTree('post') selectedValue=$actionForm->get('category_id')}>
+    </select></div>
+  </div>
+  <{else}>
+  <{xoops_input type="hidden" name="category_id" value="0"}>
+  <{/if}>
+
+
+  <div class="control-group">
+    <label for="site" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SITE}></label>
+    <div class="controls"><{xoops_input type=text name=site value=$actionForm->get('site') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="title" class="control-labelrequired"><{$smarty.const._MD_AF_DMM_LANG_TITLE}></label>
+    <div class="controls"><{xoops_input type=text name=title value=$actionForm->get('title') class="span4" maxlength=255required}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="id" class="control-label required"><{$smarty.const._MD_AF_DMM_LANG_ID}></label>
+    <div class="controls"><{xoops_input type=text name=id value=$actionForm->get('id') class="span1"}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="service_name" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SERVICE_NAME}></label>
+    <div class="controls"><{xoops_input type=text name=service_name value=$actionForm->get('service_name') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="floor_name" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_FLOOR_NAME}></label>
+    <div class="controls"><{xoops_input type=text name=floor_name value=$actionForm->get('floor_name') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="category_name" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_CATEGORY_NAME}></label>
+    <div class="controls"><{xoops_input type=text name=category_name value=$actionForm->get('category_name') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="content_id" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_CONTENT_ID}></label>
+    <div class="controls"><{xoops_input type=text name=content_id value=$actionForm->get('content_id') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="product_id" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_PRODUCT_ID}></label>
+    <div class="controls"><{xoops_input type=text name=product_id value=$actionForm->get('product_id') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="url" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_URL}></label>
+    <div class="controls"><{xoops_input type=text name=url value=$actionForm->get('url') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="affiliateURL" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_AFFILIATEURL}></label>
+    <div class="controls"><{xoops_input type=text name=affiliateURL value=$actionForm->get('affiliateURL') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="imageURL_list" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_IMAGEURL_LIST}></label>
+    <div class="controls"><{xoops_input type=text name=imageURL_list value=$actionForm->get('imageURL_list') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="imageURL_small" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_IMAGEURL_SMALL}></label>
+    <div class="controls"><{xoops_input type=text name=imageURL_small value=$actionForm->get('imageURL_small') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="imageURL_large" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_IMAGEURL_LARGE}></label>
+    <div class="controls"><{xoops_input type=text name=imageURL_large value=$actionForm->get('imageURL_large') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS0" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES0}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS0 value=$actionForm->get('sampleImageS0') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS1" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES1}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS1 value=$actionForm->get('sampleImageS1') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS2" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES2}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS2 value=$actionForm->get('sampleImageS2') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS3" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES3}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS3 value=$actionForm->get('sampleImageS3') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS4" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES4}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS4 value=$actionForm->get('sampleImageS4') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS5" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES5}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS5 value=$actionForm->get('sampleImageS5') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS6" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES6}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS6 value=$actionForm->get('sampleImageS6') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS7" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES7}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS7 value=$actionForm->get('sampleImageS7') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS8" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES8}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS8 value=$actionForm->get('sampleImageS8') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="sampleImageS9" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_SAMPLEIMAGES9}></label>
+    <div class="controls"><{xoops_input type=text name=sampleImageS9 value=$actionForm->get('sampleImageS9') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="movie_tag" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_MOVIE_TAG}></label>
+    <div class="controls"><{xoops_textarea type=text name=movie_tag value=$actionForm->get('movie_tag')}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="price" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_PRICE}></label>
+    <div class="controls"><{xoops_input type=text name=price value=$actionForm->get('price') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="list_price" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_LIST_PRICE}></label>
+    <div class="controls"><{xoops_input type=text name=list_price value=$actionForm->get('list_price') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="iteminfo_series_name" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_ITEMINFO_SERIES_NAME}></label>
+    <div class="controls"><{xoops_input type=text name=iteminfo_series_name value=$actionForm->get('iteminfo_series_name') class="span4" maxlength=255}></div>
+  </div>
+
+  <div class="control-group">
+    <label for="iteminfo_maker_name" class="control-label"><{$smarty.const._MD_AF_DMM_LANG_ITEMINFO_MAKER_NAME}></label>
+    <div class="controls"><{xoops_input type=text name=iteminfo_maker_name value=$actionForm->get('iteminfo_maker_name') class="span4" maxlength=255}></div>
+  </div>
+
+    <{if $tag_dirname}>
+    <dt><{$smarty.const._TAG}></dt>
+    <dd>
+      <{xoops_input type=text name=tags value=$actionForm->get('tags')}>
+      <{legacy_tag_select tDirname=$tag_dirname tags=$object->mTag}>
+    </dd>
+    <{/if}>
+    <dt></dt>
+    <dd>
+      <{xoops_token form=$actionForm}>
+      <input type="submit" value="<{$smarty.const._SUBMIT}>" />
+      <input type="submit" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel" />
+    </dd>
+  </dl>
+</form>
+</div>
