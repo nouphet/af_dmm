@@ -1,0 +1,53 @@
+,*
+
+# for Subversion
+.svn
+
+# for Mac
+.DS_Store
+
+# for Vim
+*~
+.vimrc.local
+.*.sw?
+
+# for Sabel
+*/*sabel.log
+cache/*
+
+# for CandyCane
+app/Plugin/*
+app/webroot/themed/*
+
+# for XOOPS
+sess_*
+#*/cache/*
+*/templates_c/*
+/docs
+/extras
+
+/html/class
+/html/common
+/html/core
+/html/images
+/html/install
+/html/language
+/html/modules/altsys
+/html/modules/legacy
+/html/modules/legacyRender
+/html/modules/message
+/html/modules/profile
+/html/modules/protector
+/html/modules/stdCache
+/html/modules/user
+/html/modules/xupdate
+/html/preload/disabled
+/html/themes/basic5
+/html/themes/ktai_default
+/html/themes/legacy_default
+/html/themes/pack2011_default
+/xoops_trust_path/libs
+/xoops_trust_path/modules/protector
+/xoops_trust_path/modules/xupdate
+/xoops_trust_path/PEAR
+/xoops_trust_path/uploads/xupdate/*
